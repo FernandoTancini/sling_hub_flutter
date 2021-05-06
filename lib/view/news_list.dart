@@ -17,15 +17,18 @@ class _NewsListPageState extends State<NewsListPage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: ListView(children: [
-        for (var i = 0; i < news.length; i += 1) _newsTile(context, news[i])
+        for (var i = 0; i < news.length; i += 1)
+          _newsTile(context, news[i], setState)
       ]),
     );
   }
 }
 
-Widget _newsTile(BuildContext context, News news) {
+Widget _newsTile(
+    BuildContext context, News news, void Function(VoidCallback) setState) {
   return GestureDetector(
       onTap: () => launchURL(news.url),
+      onDoubleTap: () => setState(() => news.notification = !news.notification),
       child: Card(
           child: Padding(
               padding: EdgeInsets.all(16),
@@ -42,7 +45,11 @@ Widget _newsTile(BuildContext context, News news) {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Text(news.title,
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                backgroundColor: news.notification
+                                    ? Theme.of(context).primaryColor
+                                    : null)),
                         Padding(
                             padding: EdgeInsets.only(top: 12),
                             child: Text(news.body
