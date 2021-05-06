@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sling_hub_flutter/view/home.dart';
 import 'package:sling_hub_flutter/view/startup_list.dart';
 import 'package:sling_hub_flutter/view/startup_detailing.dart';
+import 'package:sling_hub_flutter/view/news_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +31,9 @@ class MyApp extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           StartupDetailingPage.routeName: (BuildContext context) =>
               StartupDetailingPage(),
-          StartupListPage.routeName: (BuildContext context) => StartupListPage()
+          StartupListPage.routeName: (BuildContext context) =>
+              StartupListPage(),
+          NewsListPage.routeName: (BuildContext context) => NewsListPage()
         });
   }
 }

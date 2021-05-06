@@ -36,7 +36,7 @@ Widget _startupCard(BuildContext context, Startup startup) {
   return Padding(
       padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 32.0),
       child: GestureDetector(
-          onLongPress: showToast,
+          onDoubleTap: showToast,
           onTap: openStartupDetailing,
           child: Card(
             child: Padding(

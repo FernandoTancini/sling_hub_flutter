@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sling_hub_flutter/view/news_list.dart';
 import 'package:sling_hub_flutter/view/startup_list.dart';
+import 'package:sling_hub_flutter/view/news_list.dart';
 
 class HomePage extends StatefulWidget {
   final String title = 'Sling Hub';
@@ -14,11 +16,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: ListView(children: [
-        ListTile(
+        Card(
+            child: ListTile(
           title: Text('Startups'),
+          trailing: Icon(Icons.arrow_forward_ios_rounded),
           onTap: () => Navigator.pushNamed(context, StartupListPage.routeName),
-        ),
-        ListTile(title: Text('Notícias'))
+        )),
+        Card(
+            child: ListTile(
+          title: Text('Notícias'),
+          trailing: Icon(Icons.arrow_forward_ios_rounded),
+          onTap: () => Navigator.pushNamed(context, NewsListPage.routeName),
+        ))
       ]),
     );
   }

@@ -48,3 +48,17 @@ Startup getStartup(String id) {
   final filterResult = startups.where((s) => s.id == id);
   return filterResult.first;
 }
+
+class News {
+  String id, relatedStartupId, title, body, url;
+  News(this.id, this.relatedStartupId, this.title, this.body, this.url);
+}
+
+List<News> news = [
+  News(
+      '1',
+      '1234',
+      'Foi dada a largada: Nubank recebe aval do BC para comprar Easynvest',
+      'Agora vai. O Nubank recebeu ontem (4) o sinal verde do Banco Central (BC) para compra da Easynvest, corretora digital com mais de 1,5 milhão de clientes e R\$26 bilhões de  ativos sob custódia, que tinha sido anunciada em setembro de 2020.',
+      'https://finsiders.com.br/2021/05/05/nubank-recebe-aprovacao-do-bc-para-comprar-easynvest/')
+];
