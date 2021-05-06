@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sling_hub_flutter/view/home.dart';
-import 'package:sling_hub_flutter/view/detailing.dart';
-import 'package:sling_hub_flutter/view/profile.dart';
-import 'package:sling_hub_flutter/view/edit_profile.dart';
+import 'package:sling_hub_flutter/view/startup_list.dart';
+import 'package:sling_hub_flutter/view/startup_detailing.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,11 +26,11 @@ class MyApp extends StatelessWidget {
               headline6: TextStyle(fontSize: 36.0),
               bodyText2: TextStyle(fontSize: 16.0)),
         ),
-        home: MyHomePage(),
+        home: HomePage(),
         routes: <String, WidgetBuilder>{
-          DetailingPage.routeName: (BuildContext context) => DetailingPage(),
-          ProfilePage.routeName: (BuildContext context) => ProfilePage(),
-          EditProfilePage.routeName: (BuildContext context) => EditProfilePage()
+          StartupDetailingPage.routeName: (BuildContext context) =>
+              StartupDetailingPage(),
+          StartupListPage.routeName: (BuildContext context) => StartupListPage()
         });
   }
 }

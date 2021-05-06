@@ -9,7 +9,7 @@ class Startup {
   static final IconData iconData = Icons.store;
 }
 
-List<Startup> startupList = [
+List<Startup> startups = [
   Startup(
       '1234',
       'Nubank',
@@ -45,6 +45,6 @@ List<Startup> startupList = [
 ];
 
 Startup getStartup(String id) {
-  final filterResult = startupList.where((s) => s.id == id);
+  final filterResult = startups.where((s) => s.id == id);
   return filterResult.first;
 }

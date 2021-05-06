@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:sling_hub_flutter/model.dart';
 import 'package:sling_hub_flutter/view/components.dart';
 
-class DetailingPage extends StatefulWidget {
+class StartupDetailingPage extends StatefulWidget {
   static const routeName = '/detalhamento';
 
   @override
-  _DetailingPageState createState() => _DetailingPageState();
+  _StartupDetailingPageState createState() => _StartupDetailingPageState();
 }
 
-class _DetailingPageState extends State<DetailingPage> {
+class _StartupDetailingPageState extends State<StartupDetailingPage> {
   @override
   Widget build(BuildContext context) {
     final id = ModalRoute.of(context).settings.arguments as String;
