@@ -24,11 +24,17 @@ class _StartupDetailingPageState extends State<StartupDetailingPage> {
                 children: [
                   Row(
                     children: [
-                      Icon(Startup.iconData, size: 70.0),
-                      Padding(
-                          padding: EdgeInsets.only(left: 12),
-                          child: Text(startup.name,
-                              style: TextStyle(fontSize: 24)))
+                      Container(
+                        margin: EdgeInsets.only(right: 12),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        child: Padding(
+                            padding: EdgeInsets.all(4),
+                            child: Icon(Startup.iconData, size: 70.0)),
+                      ),
+                      Text(startup.name, style: TextStyle(fontSize: 24))
                     ],
                   ),
                   Padding(

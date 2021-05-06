@@ -1,6 +1,7 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:sling_hub_flutter/model.dart';
-import 'package:sling_hub_flutter/view/components.dart';
+import 'package:sling_hub_flutter/util.dart';
 
 class NewsListPage extends StatefulWidget {
   final title = 'Notícias';
@@ -16,10 +17,38 @@ class _NewsListPageState extends State<NewsListPage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: ListView(children: [
-        for (var i = 0; i < news.length; i += 1) _newsCard(context, news[i])
+        for (var i = 0; i < news.length; i += 1) _newsTile(context, news[i])
       ]),
     );
   }
 }
 
-Widget _newsCard(BuildContext context, News news) => Text('On Progress');
+Widget _newsTile(BuildContext context, News news) {
+  return GestureDetector(
+      onTap: () => launchURL(news.url),
+      child: Card(
+          child: Padding(
+              padding: EdgeInsets.all(16),
+              child:
+                  Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Icon(
+                  Icons.featured_play_list_outlined,
+                  size: 50,
+                ),
+                Expanded(
+                    child: Padding(
+                  padding: EdgeInsets.only(left: 12),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(news.title,
+                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        Padding(
+                            padding: EdgeInsets.only(top: 12),
+                            child: Text(news.body
+                                    .substring(0, min(200, news.body.length)) +
+                                '...'))
+                      ]),
+                ))
+              ]))));
+}

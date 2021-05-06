@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sling_hub_flutter/view/news_list.dart';
 import 'package:sling_hub_flutter/view/startup_list.dart';
-import 'package:sling_hub_flutter/view/news_list.dart';
 
 class HomePage extends StatefulWidget {
   final String title = 'Sling Hub';

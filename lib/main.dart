@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.indigo[800],
           accentColor: Colors.cyan[600],
 
-          fontFamily: 'helvetica Now Text',
+          fontFamily: 'helvetica',
 
           // Define the default TextTheme. Use this to specify the default
           // text styling for headlines, titles, bodies of text, and more.
