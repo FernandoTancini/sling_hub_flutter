@@ -18,13 +18,13 @@ class _NewsListPageState extends State<NewsListPage> {
       appBar: AppBar(title: Text(widget.title)),
       body: ListView(children: [
         for (var i = 0; i < news.length; i += 1)
-          _newsTile(context, news[i], setState)
+          _newsCard(context, news[i], setState)
       ]),
     );
   }
 }
 
-Widget _newsTile(
+Widget _newsCard(
     BuildContext context, News news, void Function(VoidCallback) setState) {
   return GestureDetector(
       onTap: () => launchURL(news.url),
