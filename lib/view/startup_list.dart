@@ -46,15 +46,13 @@ Widget _startupCard(BuildContext context, Startup startup) {
                     Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(right: 12),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          child: Padding(
-                              padding: EdgeInsets.all(4),
-                              child: Icon(Startup.iconData, size: 50.0)),
-                        ),
+                            margin: EdgeInsets.only(right: 12),
+                            color: Colors.white,
+                            child: Image.network(
+                              startup.imgUrl,
+                              width: 50,
+                              height: 50,
+                            )),
                         Text(startup.name, style: TextStyle(fontSize: 20))
                       ],
                     ),

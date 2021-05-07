@@ -34,10 +34,20 @@ Widget _newsTile(
               padding: EdgeInsets.all(16),
               child:
                   Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Icon(
-                  Icons.featured_play_list_outlined,
-                  size: 50,
-                ),
+                Container(
+                    margin: EdgeInsets.only(right: 12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: news.notification
+                          ? Theme.of(context).primaryColor
+                          : null,
+                    ),
+                    child: Padding(
+                        padding: EdgeInsets.all(12),
+                        child: Icon(
+                          Icons.featured_play_list_outlined,
+                          size: 50,
+                        ))),
                 Expanded(
                     child: Padding(
                   padding: EdgeInsets.only(left: 12),
@@ -46,10 +56,8 @@ Widget _newsTile(
                       children: [
                         Text(news.title,
                             style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                backgroundColor: news.notification
-                                    ? Theme.of(context).primaryColor
-                                    : null)),
+                              fontWeight: FontWeight.w800,
+                            )),
                         Padding(
                             padding: EdgeInsets.only(top: 12),
                             child: Text(news.body

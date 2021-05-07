@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Startup {
-  String id, name, description, sector;
+  String id, name, description, sector, imgUrl;
   int foundationYear;
   bool wantsinvestment, wantsToHire;
-  Startup(this.id, this.name, this.description, this.sector,
+  Startup(this.id, this.name, this.description, this.sector, this.imgUrl,
       this.foundationYear, this.wantsinvestment, this.wantsToHire);
   static final IconData iconData = Icons.store;
 }
@@ -15,6 +15,7 @@ List<Startup> startups = [
       'Nubank',
       'Você finalmente no controle do seu dinheiro. Controle total do cartão de crédito e da Nuconta 100% digital.',
       'Fintech',
+      'https://api.slinghub.com.br/media/actor/b01646.png',
       2013,
       false,
       true),
@@ -23,6 +24,7 @@ List<Startup> startups = [
       'Quinto Andar',
       'QuintoAndar is a Brazilian technology company that was created to simplify the lives of those looking for a new home. We are changing the real estate market with a pioneering business model in the world. We have a lot of talented people working to ensure that thousands of people around Brazil live better. Our team already has over a thousand people and we have offices in São Paulo and Campinas. Our product is now available in more than 20 Brazilian cities.',
       'Real Estate',
+      'https://api.slinghub.com.br/media/actor/0_15.png',
       2012,
       true,
       true),
@@ -31,6 +33,7 @@ List<Startup> startups = [
       'Loft',
       'A Loft é uma plataforma de compra e venda de imóveis residenciais usados, que garante liquidez imediata a proprietários e oferece a compradores espaços reformados de alta qualidade e prontos para se morar. A empresa alavanca tecnologia para avaliar os ativos de forma transparente, gerar propostas de compra justas e adquiri-los dos vendedores. A partir daí a Loft cria, executa o projeto de reforma e revende os imóveis com agilidade e eficiência.',
       'Real Estate',
+      'https://api.slinghub.com.br/media/actor/b00123.png',
       2018,
       false,
       true),
@@ -39,6 +42,7 @@ List<Startup> startups = [
       'iFood',
       'O iFood é a foodtech líder da América Latina! Com 8 anos de atuação, tem o propósito de revolucionar o universo da alimentação por uma vida mais prática e prazerosa. São milhões de pedidos por mês em verdadeiras Black Fridays semanais, em um ambiente tecnológico inovador e o desafio do forte crescimento com nossos parceiros entregadores, restaurantes e clientes. O iFood conta com a participação da Movile - líder global em marketplaces móveis - e da Just Eat.',
       'Foodtech',
+      'https://api.slinghub.com.br/media/actor/ifoodlogonova.png',
       2011,
       true,
       false),
