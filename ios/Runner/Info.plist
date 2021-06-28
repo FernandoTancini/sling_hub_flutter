@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To get your location</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To get your location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>To get your location</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>pt</string>
@@ -58,5 +64,7 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>To take amazing pictures.</string>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 </dict>
 </plist>

@@ -1,9 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sling_hub_flutter">
+
+    <uses-permission
+      android:name="android.permission.ACCESS_FINE_LOCATION" />
+   <uses-permission
+      android:name="android.permission.ACCESS_COARSE_LOCATION" />
+   <uses-permission
+      android:name="android.permission.CAMERA" />
+
    <application
         android:label="sling_hub_flutter"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="com.google.android.API_KEY"
+            android:value="AIzaSyDo-cC8jgqyq8NTcen5r4P9aq4hu5RIGm4" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
