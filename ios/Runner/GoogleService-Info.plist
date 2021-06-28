@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>380874853439-1qc1im3l5qc1edush4ibdf63ugcoao34.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.380874853439-1qc1im3l5qc1edush4ibdf63ugcoao34</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCPfqDiooi5PjYFoRGWpIa9rKBSfl9g9hU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>380874853439</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.slingHubFlutter</string>
+	<key>PROJECT_ID</key>
+	<string>slinghub-flutter-4bcc1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>slinghub-flutter-4bcc1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:380874853439:ios:fc4f81691223dace58bc8a</string>
+</dict>
+</plist>

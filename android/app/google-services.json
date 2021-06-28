@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "380874853439",
+    "project_id": "slinghub-flutter-4bcc1",
+    "storage_bucket": "slinghub-flutter-4bcc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380874853439:android:861960f57de39ed958bc8a",
+        "android_client_info": {
+          "package_name": "com.example.sling_hub_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380874853439-0ih2452998n9ag1e7ch8sfnhk0lcdkab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRN_i1l8Fw7aPIuIgKWFIW46J2H4IoRFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380874853439-0ih2452998n9ag1e7ch8sfnhk0lcdkab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
