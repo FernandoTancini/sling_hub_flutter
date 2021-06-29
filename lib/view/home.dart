@@ -7,6 +7,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:location/location.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:sling_hub_flutter/notification.dart';
 
 class HomePage extends StatefulWidget {
   final String title = 'Sling Hub';
@@ -51,10 +53,12 @@ class _HomePageState extends State<HomePage> {
                       child: ListTile(
                     title: Text('Startups'),
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    onTap: () {
+                    onTap: () async {
                       FirebaseFirestore.instance
                           .collection('events')
                           .add({'text': 'Hola!'});
+                      final PickedFile pickedFile = await ImagePicker()
+                          .getImage(source: ImageSource.camera);
                       Navigator.pushNamed(context, StartupListPage.routeName);
                     },
                   )),
@@ -75,6 +79,14 @@ class _HomePageState extends State<HomePage> {
                       availableCameras().then((print));
                     },
                   )),
+                  Card(
+                      child: ListTile(
+                          title: Text('Notificação'),
+                          trailing: Icon(Icons.notification_important),
+                          onTap: () async {
+                            NotificationHelper.getInstance
+                                .notiy('title', 'body');
+                          })),
                 ])),
             Container(
                 height: MediaQuery.of(context).size.height / 2,
